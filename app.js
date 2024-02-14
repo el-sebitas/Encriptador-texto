@@ -1,9 +1,9 @@
-let wordEncriptTask = 'abril es un mes';
-console.log(wordEncriptTask);
-console.log(encriptar(wordEncriptTask));
-console.log(desencriptar(encriptar(wordEncriptTask)));
+encriptar();
+desencriptar();
 
-function encriptar(wordEncript) {
+function encriptar() {
+    let wordEncript = document.getElementById('wordEncript').value;
+    let value = document.getElementById('text');
     let result = '';
     for (let i = 0; i <= wordEncript.length-1; i++) {
         if (wordEncript[i] == 'a') {
@@ -20,10 +20,12 @@ function encriptar(wordEncript) {
             result += wordEncript[i];
         }
     }
-    return result;
+    value.innerHTML = result;
 }
 
-function desencriptar(wordEncript){
+function desencriptar(){
+    let wordEncript = document.getElementById('wordEncript').value;
+    let value = document.getElementById('text');
     let result = '';
     let iter = 0;
     for (let i=0; i <= wordEncript.length-1; i+=iter) {
@@ -42,5 +44,5 @@ function desencriptar(wordEncript){
         }
         result += wordEncript[i];
     }
-    return result;
+    value.innerHTML = result;
 }
