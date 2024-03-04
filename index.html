@@ -8,17 +8,24 @@
     </head>
     <body>
         <header>
-            <p>imagen aqui</p>
+            <h1><img src="img/Logo.svg" alt="logo alura"></h1>
         </header>
         <main>
-            <div class="input-encript">
-                <textarea class="word-encript" type="text" id="wordEncript"></textarea>
-                <div class="boton">
-                    <button onclick="encriptar()">Encriptar</button>
-                    <button onclick="desencriptar()">Desencriptar</button>
+            <section class="texto-1">
+                <textarea class="word-encript" type="text" id="wordEncript" cols="50" rows="10" placeholder="Ingrese texto aquí"></textarea>
+                <h6 class="informacion"><img src="img/alerta.svg"> letras minúsculas y sin acento</h6>
+                <div class="botones">
+                    <button onclick="encriptar()" class="boton-encript">Encriptar</button>
+                    <button onclick="desencriptar()" class="boton-desencript">Desencriptar</button>
                 </div>
-            </div>
-            <p id="text" class="output"></p>
+            </section>
+            <section class="texto-2">
+                <img class="imgMuñeco" src="/img/Muñeco.svg">
+                <p class="mensaje" id="text"></p>
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>Ingrese el texto que desea encriptar o desencriptar</p>
+                <button class="boton-copiar">Copiar</button>
+            </section>
         </main>
         <script src="app.js" defer></script>
     </body>

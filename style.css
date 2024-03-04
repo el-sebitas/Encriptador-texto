@@ -1,26 +1,117 @@
-body{
+*{
     background-color: #f3f5fc;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
 }
 
-.input-encript{
-    display: inline;
+header{
+    margin-top: 10px;
+    padding: 0px;
+}
+
+main{
+    display: flex;
+    margin-left: 80px;
+}
+
+.texto-1{
+    flex: 1;
+}
+
+.texto-2{
+    flex: 2;
+    background: white;
+    margin-right: 400px;
+    margin-left: 200px;
+    padding-right: 40px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 20px;
+    min-width: 320px;
 }
 
 .word-encript{
-    width: 600px;
-    border: 3px solid blue;
-    border-radius: 10px;
-
+    border: none;
+    color: #0a3871;
+    text-transform: lowercase;
+    margin-bottom: 0;
 }
 
-.boton button{
-    border: 3px solid blue;
-    width: 100px;
-    
+.word-encript:focus{
+    outline: none;
 }
 
-.output{
-    display: inline-block;
-    top: 0;
-    margin: 0 auto;
+.mensaje{
+    color: #0a3871;
+    background-color: #ffffff;
+}
+
+.mensaje:focus{
+    outline: none;
+}
+
+.imgMuñeco{
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+h6{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.botones{
+    display: flex;
+}
+
+.boton-encript{
+    background-color: #0a3871;
+    border: 1px solid #0a3871;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    height: 67px;
+    width: 328px;
+    font-size: 20px;
+}
+
+.boton-encript:hover{
+    background-color: #052051;
+}
+
+.boton-desencript{
+    background-color: #ffffff;
+    border: 1px solid #0a3871;
+    color: #0a3871;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.boton-desencript:hover{
+    background-color: #E9ECF8;
+}
+
+.boton-copiar{
+    border: 1px solid #0a3871;
+    color: #0a3871;
+    background-color: #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 67px;
+    width: 320px;
+    margin-left: 10px;
+    margin-bottom: 45px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.boton-copiar:hover{
+    background-color: #E9ECF8;
 }
