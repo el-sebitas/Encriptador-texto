@@ -15,19 +15,21 @@
                 <textarea class="word-encript" type="text" id="wordEncript" cols="50" rows="10" placeholder="Ingrese texto aquí"></textarea>
                 <h6 class="informacion"><img src="img/alerta.svg"> letras minúsculas y sin acento</h6>
                 <div class="botones">
-                    <button onclick="encriptar()" class="boton-encript">Encriptar</button>
-                    <button onclick="desencriptar()" class="boton-desencript">Desencriptar</button>
+                    <button onclick="boton_encriptar()" class="boton-encript">Encriptar</button>
+                    <button onclick="boton_desencriptar()" class="boton-desencript">Desencriptar</button>
                 </div>
             </section>
             <section class="texto-2">
-                <div class="sin_resultado_ntf">
+                <!--
+                <div class="sin_resultado_ntf" id="sin_resultado_ntf">
                     <h3>Ningún mensaje fue encontrado</h3>
                     <p>Ingrese el texto que desea encriptar o desencriptar</p>
                     <img class="imgMuñeco" src="/img/Muñeco.svg">
                 </div>
-                <div class="mensaje_resultado">
-                    <p class="mensaje" id="text"></p>
-                    <button class="boton-copiar">Copiar</button>
+                -->
+                <div class="mensaje_resultado" id="mensaje_resultado">
+                    <textarea class="mensaje" id="text" rows="10"></textarea>
+                    <button class="boton-copiar" data-button="secondary">Copiar</button>
                 </div>
             </section>
         </main>
