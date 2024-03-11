@@ -1,5 +1,10 @@
-const wordEncript = document.querySelector('.word-encript');
-const text = document.querySelector('.mensaje');
+const wordEncript = document.getElementById('wordEncript');
+const text = document.getElementById('text');
+let sin_resultado_ntf = document.getElementById('sin_resultado_ntf');
+let mensaje_resultado = document.getElementById('mensaje_resultado');
+sin_resultado_ntf.style.display = 'block';
+mensaje_resultado.style.display = 'none';
+
 
 function encriptar(wordEncript2) {
     let result = '';
@@ -52,17 +57,24 @@ function desencriptar(wordEncript2){
 }
 
 function boton_encriptar(){
+    mostrarResultado();
     text.value = encriptar(wordEncript.value);
     wordEncript.value = '';
 }
 
 function boton_desencriptar(){
+    mostrarResultado();
     text.value = desencriptar(wordEncript.value);
     wordEncript.value = '';
 }
 
 function copiar(){
     text.select();
-    navigator.clipboard.writeText(mensaje.value)
+    navigator.clipboard.writeText(text.value)
     alert("Texto Copiado")
+}
+
+function mostrarResultado() {
+    sin_resultado_ntf.style.display = 'none';
+    mensaje_resultado.style.display = 'block';
 }
