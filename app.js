@@ -56,6 +56,11 @@ function desencriptar(wordEncript2){
     return result;
 }
 
+function mostrarResultado() {
+    sin_resultado_ntf.style.display = 'none';
+    mensaje_resultado.style.display = 'block';
+}
+
 function boton_encriptar(){
     mostrarResultado();
     text.value = encriptar(wordEncript.value);
@@ -72,9 +77,4 @@ function copiar(){
     text.select();
     navigator.clipboard.writeText(text.value)
     alert("Texto Copiado")
-}
-
-function mostrarResultado() {
-    sin_resultado_ntf.style.display = 'none';
-    mensaje_resultado.style.display = 'block';
 }
