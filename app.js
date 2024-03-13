@@ -8,8 +8,6 @@ mensaje_resultado.style.display = 'none';
 
 function encriptar(wordEncript2) {
     let result = '';
-    // Con la variable wordEncript2 iteramos sobre esta y cuando llegamos a las vocales
-    // cambiamos estas por su valor encriptado siendo result el encriptado
     for (let i = 0; i <= wordEncript2.length-1; i++) {
         if (wordEncript2[i] == 'a') {
             result += 'ai';
@@ -25,17 +23,12 @@ function encriptar(wordEncript2) {
             result += wordEncript2[i];
         }
     }
-    //value.innerHTML = result;
     return result;
 }
 
 function desencriptar(wordEncript2){
     let result = '';
     let iter = 0;
-    // Con wordEncript2 iteramos sobre las vocales, como estas estan encriptadas,
-    // solo tomamos su caracter inicial, por ejemplo "ufat" solo toamos u
-    // e incertamos los caracteres en result, con iter adelantamos la iteracion para saltarnos
-    // el valor encriptado
     for (let i=0; i <= wordEncript2.length-1; i+=iter) {
         if (wordEncript2[i] == 'a') {
             iter = 2;
@@ -52,7 +45,6 @@ function desencriptar(wordEncript2){
         }
         result += wordEncript2[i];
     }
-    //value.innerHTML = result;
     return result;
 }
 
